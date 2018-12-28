@@ -1,32 +1,61 @@
+html {
+      background: #ffc600;
+      font-family: 'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+    }
+
+body {
+    margin: 0;
+}
+
+
 .container {
-    display: flex;
-    flex-direction: row;
+    min-height: 100vh;
     justify-content: center;
-    height: 100vw;
 }
 
 .panel {
-    width: 20vw;
-    justify-content: center;
-    display: flex; 
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1); /* Adds a 5px from border shadow to each image */
+
+}       
+
+a {
+    bottom: 0;
+}
+
+/* Apply margin to 0 to all child elements of panel class */
+.panel > * {
+    margin: 0;
+    font-size: 2em; 
+}
+
+/* Select the 2nd paragraph in each panel class div */
+.panel p:nth-child(2) {
+    font-size: 4em;
 }
 
 .panel1 {
-    background-color: red;
+    background-image: url(img/pamela-lima-761283-unsplash.jpg);
 }
 
 .panel2 {
-    background-color: orange;
+    background-image: url(img/guy-stevens-746794-unsplash.jpg);
 }
 
 .panel3 {
-    background-color: yellow;
+    background-image: url(img/jeremy-bishop-335002-unsplash.jpg);
 }
 
 .panel4 {
-    background-color: green;
+    background-image: url(img/pablo-merchan-montes-723425-unsplash.jpg);
 }
 
 .panel5 {
-    background-color: blue;
+    background-image: url(img/tim-mossholder-660364-unsplash.jpg);
 }
