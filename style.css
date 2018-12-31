@@ -1,14 +1,13 @@
 html {
-      background: #ffc600;
-      font-family: 'helvetica neue';
-      font-size: 20px;
-      font-weight: 200;
+    background: #ffc600;
+    font-family: 'helvetica neue';
+    font-size: 35px;
+    font-weight: 200;
     }
 
 body {
     margin: 0;
 }
-
 
 .container {
     min-height: 100vh;
@@ -53,7 +52,9 @@ body {
 .panel > *:last-child {transform: translateY(100%);}
 .panel.open-active > *:last-child {transform: translateY(0);}
 
-
+.panel p {
+    font-family: 'Amatic SC', cursive;
+}
 
 /* Select the 2nd paragraph in each panel class div */
 .panel p:nth-child(2) {
@@ -63,7 +64,7 @@ body {
 /*Transition classes -------------------------*/ 
 .panel.open {
     flex: 5;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 .panel1 {
