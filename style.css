@@ -24,23 +24,46 @@ body {
     background-position: center;
     box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1); /* Adds a 5px from border shadow to each image */
     transition: 
-
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+    flex: 1; /* evenly distribute items among space */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }       
 
 /* Apply margin to 0 to all child elements of panel class */
 .panel > * {
     margin: 0;
-    font-size: 2em; 
+    width: 100%;
+    /*  Add this to see what we're doing with the code below
+    border: 1px solid red; 
+    */
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .5s;
 }
+
+.panel > *:first-child {transform: translateY(-100%);}
+.panel.open-active > *:first-child {transform: translateY(0);}
+.panel > *:last-child {transform: translateY(100%);}
+.panel.open-active > *:last-child {transform: translateY(0);}
+
+
 
 /* Select the 2nd paragraph in each panel class div */
 .panel p:nth-child(2) {
-    font-size: 4em;
+    font-size: 2em;
 }
 
 /*Transition classes -------------------------*/ 
-.open {
-    font-size: 10px;
+.panel.open {
+    flex: 5;
+    font-size: 1.3em;
 }
 
 .panel1 {
