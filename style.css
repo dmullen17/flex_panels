@@ -13,6 +13,7 @@ body {
 .container {
     min-height: 100vh;
     justify-content: center;
+    display: flex;
 }
 
 .panel {
@@ -22,12 +23,9 @@ body {
     background-size: cover;
     background-position: center;
     box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1); /* Adds a 5px from border shadow to each image */
+    transition: 
 
 }       
-
-a {
-    bottom: 0;
-}
 
 /* Apply margin to 0 to all child elements of panel class */
 .panel > * {
@@ -38,6 +36,11 @@ a {
 /* Select the 2nd paragraph in each panel class div */
 .panel p:nth-child(2) {
     font-size: 4em;
+}
+
+/*Transition classes -------------------------*/ 
+.open {
+    font-size: 10px;
 }
 
 .panel1 {
