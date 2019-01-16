@@ -1,0 +1,68 @@
+body {
+    color: white;
+    font-size: 3.5em;
+    font-family: fantasy;   
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.panel {
+    /* this flex: 1 applies to the items in .container */
+    flex: 1;
+    /* Create another flex container */
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 0 0 5px rgba(0, 0, 0, .1);
+    background-size: cover;
+    background-position: center;
+    transition: flex 1s cubic-bezier(0.61,-0.19, 0.7,-0.11), 
+                font-size 1s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+}
+
+/*I could also write this as p {...}*/
+.panel > * {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: transform .5s linear;
+}
+
+.panel p:first-child {
+    transform: translateY(-100%);
+}
+.panel.open-active p:first-child {
+    transform: translateY(0);
+}
+.panel p:last-child {
+    transform: translateY(100%);
+}
+.panel.open-active p:last-child {
+    transform: translateY(0);
+}
+
+.flex-grow {
+    flex: 5; 
+    font-size: 1.5em;
+}
+
+.panel-1 {
+    background-image: url(img/yuliya-kosolapova-1299628-unsplash.jpg);
+}
+.panel-2 {
+    background: orange;
+}
+.panel-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(img/autumn-goodman-242816-unsplash.jpg);
+}
+.panel-4 {
+    background: green;
+}
+.panel-5 {
+    background-image: url(img/joe-andary-261780-unsplash.jpg);
+}
