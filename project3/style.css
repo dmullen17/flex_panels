@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    flex-direction: row;
+    font-family: fantasy;
+    font-size: 1.5em;
+}
+
+.panel {
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    transition: flex 1s cubic-bezier(.25, 2.1, .75, 1.54),
+                font-size 1s cubic-bezier(.25, 2.1, .75, 1.54);
+}
+
+.panel p {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transition: transform .5s linear;
+}
+
+.panel-grow {
+    flex: 5;
+    font-size: 2em;
+}
+
+.panel > p:nth-child(1) {
+    transform: translateY(-100%);
+}
+.panel.open-active > p:nth-child(1) {
+    transform: translateY(0%);
+}
+.panel > p:nth-child(3) {
+    transform: translateY(100%);
+}
+.panel.open-active > p:nth-child(3) {
+    transform: translateY(0%);
+}
+
+.panel-1 {
+    background-color: red;
+}
+.panel-2 {
+    background-color: orange;
+}
+.panel-3 {
+    background-color: yellow;
+}
+.panel-4 {
+    background-color: green;
+}
+.panel-5 {
+    background-color: blue;
+}
